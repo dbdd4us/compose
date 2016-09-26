@@ -858,6 +858,24 @@ refer to it within the Compose file:
         external:
           name: actual-name-of-volume
 
+### labels
+
+> [Added in version 2.1 file format](#version-21).
+
+Add metadata to volumes using [Docker labels](https://docs.docker.com/engine/userguide/labels-custom-metadata/). You can use either an array or a dictionary.
+
+It's recommended that you use reverse-DNS notation to prevent your labels from conflicting with those used by other software.
+
+    labels:
+      com.example.description: "Accounting webapp"
+      com.example.department: "Finance"
+      com.example.label-with-empty-value: ""
+
+    labels:
+      - "com.example.description=Accounting webapp"
+      - "com.example.department=Finance"
+      - "com.example.label-with-empty-value"
+
 
 ## Network configuration reference
 
@@ -970,6 +988,24 @@ refer to it within the Compose file:
       outside:
         external:
           name: actual-name-of-network
+
+### labels
+
+> [Added in version 2.1 file format](#version-21).
+
+Add metadata to networks using [Docker labels](https://docs.docker.com/engine/userguide/labels-custom-metadata/). You can use either an array or a dictionary.
+
+It's recommended that you use reverse-DNS notation to prevent your labels from conflicting with those used by other software.
+
+    labels:
+      com.example.description: "Accounting webapp"
+      com.example.department: "Finance"
+      com.example.label-with-empty-value: ""
+
+    labels:
+      - "com.example.description=Accounting webapp"
+      - "com.example.department=Finance"
+      - "com.example.label-with-empty-value"
 
 
 ## Versioning
